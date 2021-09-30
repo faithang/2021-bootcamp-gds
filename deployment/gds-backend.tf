@@ -21,7 +21,7 @@ resource "aws_instance" "gds_backend_ec2" {
     yum update -y
     yum install docker -y
     service docker start
-    docker run -d -p 80:80 nginxdemos/hello:plain-text
+    docker run -d -p 80:80 ghcr.io/faithang/bootcamp-gds-frontend:efda66e697e324660f6dfe79ef86e188fe6dae69
   EOF
   )
 }
